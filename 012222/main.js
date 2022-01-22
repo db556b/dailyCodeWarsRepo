@@ -16,4 +16,6 @@ function strCount(str, letter){
   }
 
 
- 
+  function strCount2(str, letter){  
+    return str.split(letter).length-1
+  }
