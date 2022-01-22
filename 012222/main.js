@@ -9,13 +9,17 @@
 
 
 
-function strCount(str, letter){  
+function strCount(str, letter){ 
+    //create accumulator 
     let acc = 0
+    //split string into array and compare each element of the array to 'letter' argument. Increase acc when matches; otherwise, do nothing
     str.split('').forEach(e => e === letter ? acc++ : acc)
+    //return acc
     return acc
   }
 
 
   function strCount2(str, letter){  
+      //split str into arr on the argument passed in para letter. Return the length of that array as it will be equal to the number of times the letter exists in the string
     return str.split(letter).length-1
   }
