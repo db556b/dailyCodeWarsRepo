@@ -20,6 +20,6 @@ function strCount(str, letter){
 
 
   function strCount2(str, letter){  
-      //split str into arr on the argument passed in para letter. Return the length of that array as it will be equal to the number of times the letter exists in the string
+      // split str into arr on the argument passed in para letter. Return the length of that array as it will be equal to the number of times the letter exists in the string
     return str.split(letter).length-1
   }
