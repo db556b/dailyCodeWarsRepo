@@ -1,6 +1,6 @@
 
 
-// Simple Fun #352: Reagent Formula
+//   Simple Fun #352: Reagent Formula
 // Now we will confect a reagent. There are eight materials to choose from, numbered 1,2,..., 8 respectively.
 
 // We know the rules of confect:
