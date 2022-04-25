@@ -1,3 +1,5 @@
+
+//PASSWORD MAKER
 // One suggestion to build a satisfactory password is to start with a memorable phrase or sentence and make a password by extracting the first letter of each word.
 
 // Even better is to replace some of those letters with numbers (e.g., the letter O can be replaced with the number 0):
@@ -16,3 +18,5 @@ function makePassword(phrase) {
            .replace(/i/ig,'1')
            .replace(/s/ig,'5')
   }
+
+  
