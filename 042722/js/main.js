@@ -48,7 +48,7 @@ function helloWorld(){
 
 
     //Turn with a Compass
-    
+
     // You receive the direction you are facing (one of the 8 directions: N, NE, E, SE, S, SW, W, NW) and a certain degree to turn (a multiple of 45, between -1080 and 1080); positive means clockwise, and negative means counter-clockwise.
 
     // Return the direction you will face after the turn.
@@ -59,4 +59,18 @@ function helloWorld(){
         let end = compass[facing] + (turn%360)
         end >= 360 ? end -= 360 : end < 0 ? end = 360 + end : end = end
         return Object.keys(compass).find(key => compass[key] === end)
+      }
+
+      //RGB to Hex Conversion
+
+    //   The rgb function is incomplete. Complete it so that passing in RGB decimal values will result in a hexadecimal representation being returned. Valid decimal values for RGB are 0 - 255. Any values that fall out of that range must be rounded to the closest valid value.
+
+    //   Note: Your answer should always be 6 characters long, the shorthand with 3 will not work here.
+
+    function rgb(r, g, b){
+        let rgb = [r,g,b]  
+        return rgb.map(e => e > 255 ? 255 : e < 0 ? 0 : e).map(e => e < 10 ? '0' + e : e)
+          .map(e=>typeof(e) != 'number' ? e : e.toString(16).toUpperCase())
+          .map ((e) => e.length == 1 ? '0' + e : e) 
+          .join('')
       }
