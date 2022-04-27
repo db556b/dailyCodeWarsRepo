@@ -45,3 +45,18 @@ function helloWorld(){
     var str='Hello World!'
     console.log(str)
     }
+
+
+    //Turn with a Compass
+    
+    // You receive the direction you are facing (one of the 8 directions: N, NE, E, SE, S, SW, W, NW) and a certain degree to turn (a multiple of 45, between -1080 and 1080); positive means clockwise, and negative means counter-clockwise.
+
+    // Return the direction you will face after the turn.
+
+
+    function direction(facing, turn){
+        const compass = {N:0,NE:45,E:90,SE:135,S:180,SW:225,W:270,NW:315}
+        let end = compass[facing] + (turn%360)
+        end >= 360 ? end -= 360 : end < 0 ? end = 360 + end : end = end
+        return Object.keys(compass).find(key => compass[key] === end)
+      }
