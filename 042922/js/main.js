@@ -109,3 +109,28 @@ var humanYearsCatYearsDogYears = function(humanYears) {
     for (let i = 1; i <= n; i++) arr.push(i)
     return arr.reverse()
   };
+
+
+//   Exclamation marks series #2: Remove all exclamation marks from the end of sentence
+//   Description:
+
+// Remove all exclamation marks from the end of sentence.
+// Examples
+
+// remove("Hi!") === "Hi"
+// remove("Hi!!!") === "Hi"
+// remove("!Hi") === "!Hi"
+// remove("!Hi!") === "!Hi"
+// remove("Hi! Hi!") === "Hi! Hi"
+// remove("Hi") === "Hi"
+
+
+function remove (string) {  
+    let arr = string.split('')
+    for (let i = arr.length-1; i >= 0; i--){
+      if (arr[i] === '!') {
+        arr.pop()
+        }else break;
+    }
+    return arr.join('')
+  }
