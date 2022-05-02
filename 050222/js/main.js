@@ -72,4 +72,6 @@ function eachCons(array, n) {
    }
 
 
-
+   function remove2(string){
+    return string.split('!').join('') + '!'
+}
