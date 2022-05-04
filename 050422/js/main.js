@@ -24,3 +24,25 @@ const xMarksTheSpot = (input) => {
     }
     return y
   }
+
+
+
+  function dropCap(n) {
+    n = n.split(' ')
+      console.log(n)
+    return n.map(e=> {
+      if (e.split('').length <= 2){
+        return e
+        } else {
+          return e[0].toUpperCase() + e.slice(1).toLowerCase()
+        }
+    }).join(' ')
+      
+    }
+
+    function dropCap2(n) {
+        return n.split(" ").map((x) => { 
+            return x.length > 2 ? x[0].toUpperCase() + x.substring(1).toLowerCase() : 
+            x; })
+            .join(" ")
+      }
