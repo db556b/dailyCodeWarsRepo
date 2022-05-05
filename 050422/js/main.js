@@ -127,3 +127,17 @@ function scoreTest(str, right, omit, wrong){
   var findAverage = function (nums) {
     return nums.reduce((a,b) => a + +b, 0) / nums.length
   }
+
+  // Equalize the array!
+  // No description!!!
+
+  // Input :: [10,20,25,0]
+  
+  // Output :: ["+0", "+10", "+15", "-10"] 
+
+  function equalize(array){
+    return array.map(e => {
+      let num = e - array [0]
+      return num >= 0 ? `+${num}` : num.toString()
+    })  
+    }
