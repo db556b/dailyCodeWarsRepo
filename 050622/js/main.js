@@ -47,3 +47,10 @@ function getChar(c) {
         let answer = dolphin ? shark * 2 > me : shark > me
         return answer ? "Alive!" : "Shark Bait!"
       }
+
+      function shark2(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){
+        if(dolphin){
+          sharkSpeed /= 2;
+        }
+        return pontoonDistance/youSpeed < sharkDistance/sharkSpeed ? "Alive!" : "Shark Bait!";
+      }
