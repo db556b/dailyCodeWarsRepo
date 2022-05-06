@@ -54,3 +54,9 @@ function getChar(c) {
         }
         return pontoonDistance/youSpeed < sharkDistance/sharkSpeed ? "Alive!" : "Shark Bait!";
       }
+
+    //   MakeUpperCase
+    //   Write a function which converts the input string to uppercase.
+      function makeUpperCase(str) {
+        return str.toUpperCase()
+       }
