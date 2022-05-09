@@ -25,4 +25,22 @@ function stringMerge(string1, string2, letter){
     return string1.slice(0,string1.indexOf(letter)) + string2.slice(string2.indexOf(letter))
   }
 
-  
+
+//   Counting Duplicates
+//   Count the number of Duplicates
+
+//   Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string. The input string can be assumed to contain only alphabets (both uppercase and lowercase) and numeric digits.
+
+  function duplicateCount(text){
+    let firstLetterOccurence = ""
+    let dupes = ""
+    text.split('').forEach(e =>{
+      e = e.toLowerCase()
+      if (!firstLetterOccurence.includes(e)){
+        firstLetterOccurence += e
+      } else if (!dupes.includes(e)){
+        dupes += e
+      }
+    })
+    return dupes.length
+  }
