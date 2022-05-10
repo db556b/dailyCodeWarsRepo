@@ -15,7 +15,7 @@ function enough(cap, on, wait) {
     const pass = cap - on - wait
     return pass >=0 ? 0 : Math.abs(pass)
   }
-  
+
   //7kyu string ladder
   // String Ends With?
   // Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string). 
@@ -33,3 +33,37 @@ function enough(cap, on, wait) {
   function add(a, b){
     return a == b
   }
+
+//   Stop gninnipS My sdroW!
+//   Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed (Just like the name of this Kata). Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.
+
+// Examples: spinWords( "Hey fellow warriors" ) => returns "Hey wollef sroirraw" spinWords( "This is a test") => returns "This is a test" spinWords( "This is another test" )=> returns "This is rehtona test"
+
+
+  function spinWords(string){
+    return string.split(' ')
+      .map(e => e.length > 4 ? e.split('').reverse().join('') : e )
+      .join(' ')
+  }
+
+  // Digits explosion
+  // Given a string made of digits [0-9], return a string where each digit is repeated a number of times equals to its value.
+  // Examples
+  
+  // explode("312")
+  
+  // should return :
+  
+  // "333122"
+  
+  // explode("102269")
+  
+  // should return :
+  
+  // "12222666666999999999"
+
+  function explode(s) {
+    return s.split('').map(e => e.repeat(e)).join('');
+  }
+  
+  
