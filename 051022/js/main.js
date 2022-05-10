@@ -36,3 +36,9 @@
 };String.prototype.toJadenCase = function () {
   return this.split(' ').map((e,i)=> e[0].toUpperCase() + e.substr(1)).join(' ')
 };
+
+// Nth Root of a Number
+// Given two numbers x and n, calculate the (positive) nth root of x; this means that being r = result, r^n = x
+function root(x, n) {
+  return Math.pow(x,1/n)
+  }
