@@ -15,6 +15,7 @@ function enough(cap, on, wait) {
     const pass = cap - on - wait
     return pass >=0 ? 0 : Math.abs(pass)
   }
+  
   //7kyu string ladder
   // String Ends With?
   // Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string). 
