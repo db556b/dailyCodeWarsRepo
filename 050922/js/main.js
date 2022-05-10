@@ -15,6 +15,14 @@ function enough(cap, on, wait) {
     const pass = cap - on - wait
     return pass >=0 ? 0 : Math.abs(pass)
   }
+  //7kyu string ladder
+  // String Ends With?
+  // Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string). 
+
+  function solution(str, ending){
+    return str.endsWith(ending)
+  }
+
 
   // Simple Comparison?
   // Write a function that will compare two values, one will be a number and one will be a string. Return true if they are the same character (regardless of their different data types) and return false if they are not.
