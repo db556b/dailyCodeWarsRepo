@@ -42,3 +42,22 @@
 function root(x, n) {
   return Math.pow(x,1/n)
   }
+
+  // Simple Fun #154: Zero And One
+  // You have a string that consists of zeroes and ones. Now choose any two adjacent positions in the string: if one of them is 0, and the other one is 1, remove these two digits from the string.
+
+  // Return the length of the resulting (smallest) string that you can get after applying this operation multiple times?
+
+
+  function zeroAndOne(s) {
+    let e = s.split('')
+    let acc = 0
+    for (let i = 0; i<e.length; i++){
+    if (e[i] === '0' && e[i+1] === '1' || e[i] ===  '1' && e[i+1] === '0'){
+      e[i] = ' '
+      e[i+1] = ' '
+    } 
+    }
+      e.forEach(e => e === ' ' ? acc = acc : acc++)
+      return acc
+    }
