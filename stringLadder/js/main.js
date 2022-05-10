@@ -25,7 +25,7 @@ function stringMerge(string1, string2, letter){
     return string1.slice(0,string1.indexOf(letter)) + string2.slice(string2.indexOf(letter))
   }
 
-
+// 6 kyu string array
 //   Counting Duplicates
 //   Count the number of Duplicates
 
@@ -43,4 +43,43 @@ function stringMerge(string1, string2, letter){
       }
     })
     return dupes.length
+  }
+
+
+
+
+  
+//8 kyu string array
+//   Polish alphabet
+
+//   There are 32 letters in the Polish alphabet: 9 vowels and 23 consonants.
+
+// Your task is to change the letters with diacritics:
+
+// ą -> a,
+// ć -> c,
+// ę -> e,
+// ł -> l,
+// ń -> n,
+// ó -> o,
+// ś -> s,
+// ź -> z,
+// ż -> z
+
+// and print out the string without the use of the Polish letters.
+
+
+  function correctPolishLetters (string) {
+    const polish = {
+    'ą' : 'a',
+    'ć' : 'c',
+    'ę' : 'e',
+    'ł' : 'l',
+    'ń' : 'n',
+    'ó' : 'o',
+    'ś' : 's',
+    'ź' : 'z',
+    'ż' : 'z'
+    }
+    return string.split('').map(e => polish.hasOwnProperty(e) ? polish[e] : e).join('')
   }
