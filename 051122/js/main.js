@@ -13,3 +13,13 @@ function duplicateEncode(word){
     })
   return arr.join('')
 }
+
+function duplicateEncode2(word){
+    return word
+      .toLowerCase()
+      .split('')
+      .map( function (a, i, w) {
+        return w.indexOf(a) == w.lastIndexOf(a) ? '(' : ')'
+      })
+      .join('');
+  }
