@@ -23,3 +23,33 @@ function duplicateEncode2(word){
       })
       .join('');
   }
+
+
+//   Simple Fun #79: Delete a Digit
+//   Task
+
+// Given an integer n, find the maximal number you can obtain by deleting exactly one digit of the given number.
+// Example
+
+// For n = 152, the output should be 52;
+
+// For n = 1001, the output should be 101.
+
+  function deleteDigit(n) {
+      //convert n to string instead of number
+    n=n.toString()
+    //create array to store value after removing one number
+    let arr = []
+    //for loop to loop through elements and remove the current integer
+    for (let i = 0; i < n.length; i++){
+    //create new copy of n (called a) to push into the array at the end of the loop- so we never alter the original value passed as argument
+      let a = n.split('')
+      //remove current index value
+      a.splice(i,1)
+      //join the rest of the string back together, convert to a number, and push it into the arr
+      arr.push(+(a.join('')))
+    }
+    //return highest value in the arr array
+    return Math.max(...arr)
+    
+  }
