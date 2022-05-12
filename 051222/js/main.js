@@ -4,3 +4,9 @@
 var a = "code";
 var b = "wa.rs";
 var name = a + b;
+
+//Grasshopper - Variable Assignment Debug
+var a = "dev"
+var b = "Lab"
+
+var name = a + b
