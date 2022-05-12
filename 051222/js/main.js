@@ -80,10 +80,8 @@ function even_or_odd(number) {
 
 
   function bulbMaze(maze){
-    maze = maze.split('')
-    console.log(maze)
     let result = true
-    maze.forEach((e,i) => {
+    maze.split('').forEach((e,i) => {
       if (i % 2 === 0 && e === 'x' || e === ' '){
         result = result
       } else if ( i % 2 === 1 && e === 'o' || e === ' '){
