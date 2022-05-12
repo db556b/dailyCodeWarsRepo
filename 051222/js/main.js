@@ -103,3 +103,26 @@ function even_or_odd(number) {
     let sum = bin.split('').reduce((a,b)=>a+ +b, 0) % 2
     return parity === 'even' && sum === 1 || parity === 'odd' && sum === 0 ? 1 : 0 
   }
+
+
+
+//   Wilson Primes
+//   Wilson primes satisfy the following condition. Let P represent a prime number.
+
+// Then ((P-1)! + 1) / (P * P) should give a whole number.
+
+// Your task is to create a function that returns true if the given number is a Wilson prime.
+
+  function amIWilson(p) {
+    function factorialize(num) {
+    let result = num;
+    if (num === 0 || num === 1) 
+      return 1; 
+    while (num > 1) { 
+      num--;
+      result *= num;
+    }
+    return result;
+  }
+    return ((factorialize(p-1)+1)/(p*p)) % 1 === 0
+  }
