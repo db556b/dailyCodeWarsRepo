@@ -5,7 +5,11 @@
 
 
 //Switch it Up!
+//When provided with a number between 0-9, return it in words.
 
+// Input :: 1
+
+// Output :: "One".
 
 function switchItUp(number){
     //create object holding all the potential key value pairs for this limited data set
