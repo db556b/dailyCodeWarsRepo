@@ -5,7 +5,7 @@
 
 //Beginner Series #4 Cockroach
 
-
+//The cockroach is one of the fastest insects. Write a function which takes its speed in km per hour and returns it in cm per second, rounded down to the integer (= floored).
 
 function cockroachSpeed(s) {
     //take number and multiply by 27.778 and return new value rounded down. 
