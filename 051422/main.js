@@ -22,3 +22,24 @@ function mygcd(a,b){
 mygcd(6,9) // should return 3
 mygcd(12,4) // should return 2
 mygcd(24,12) // should return 6
+
+
+
+
+// Convert Integer to Binary
+// Convert integers to binary as simple as that. You would be given an integer as a argument and you have to return its binary form. To get an idea about how to convert a decimal number into a binary number, visit here.
+
+// Notes: negative numbers should be handled as two's complement; assume all numbers are integers stored using 4 bytes (or 32 bits) in any language.
+
+// Your output should ignore leading 0s.
+
+//will receive a single argument as a Number
+//return binary equivalent of number as a string
+function toBinary(n){
+    //return in string form binary n
+    //bit shift for returning negative numbers as a 32 bit inverse of positive integer
+    return (n >>> 0).toString(2)
+  }
+
+toBinary(3) //should return "11"
+toBinary(-3) //should return "11111111111111111111111111111101"
