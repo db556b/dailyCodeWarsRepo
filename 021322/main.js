@@ -11,7 +11,6 @@
 
 function tripleTrouble(one, two, three){
     let arr = []
-    let count = 0
     for (let i = 0; i < one.length; i++){
       arr.push(one[i])
       arr.push(two[i])
