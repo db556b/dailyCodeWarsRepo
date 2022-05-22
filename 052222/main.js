@@ -4,7 +4,16 @@
 // PseudoCode- multiplying the largest number by the smallest number, then the seconds smallest number by the second largest number, then the third largest number y the third smallest numer, etc and then adding those numbers will always be the lowest possible end result
 
 
-function minSum(arr) {
+
+
+
+// Minimize Sum Of Array (Array Series #1) 
+// Introduction and Warm-up (Highly recommended)
+// Playing With Lists/Arrays Series
+// Task
+
+// Given an array of integers , Find the minimum sum which is obtained from summing each Two integers product .
+// function minSum(arr) {
     //sort array largest to smallest or smallest to largest
     arr = arr.sort(function(a, b){return a-b})
     //declare a variable into which to save the total of the multiplied numbers
