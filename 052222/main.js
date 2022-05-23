@@ -13,7 +13,7 @@
 // Task
 
 // Given an array of integers , Find the minimum sum which is obtained from summing each Two integers product .
-// function minSum(arr) {
+ function minSum(arr) {
     //sort array largest to smallest or smallest to largest
     arr = arr.sort(function(a, b){return a-b})
     //declare a variable into which to save the total of the multiplied numbers
