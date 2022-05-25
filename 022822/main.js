@@ -13,3 +13,4 @@ function validateUsr(username) {
     let res =  /^[a-z0-9_]+$/.test(username) 
     return username.length > 3 && username.length < 17 && res
   }
+
