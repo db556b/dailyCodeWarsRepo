@@ -14,15 +14,21 @@
 
 
 function compare(a,b){
+    //save args as numeric counterparts
 	const numA = +a,
         numB = +b
+    //return 'greater' or 'less' when comparing numbers
   if (numA > numB) return 'greater'
   if (numA < numB) return 'less'
+  //split large integers into arrays
   a = a.split('')
   b = b.split('')
+  //start for loop
   for (let i = 0; i < a.length || i < b.length; i++){
+      //compare each element of arrays returning 'greater when a's element (converted to number) is larger than b's or 'less when it is less than b's
     if (+a[i] > +b[i]) return 'greater'
     if (+a[i] < +b[i]) return 'less'
   }
+  //return 'equal' when they are the same number
   return 'equal'
 }
