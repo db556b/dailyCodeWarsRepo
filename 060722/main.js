@@ -30,3 +30,42 @@ console.log(comp(a1, a2))
 const a3 = [];
 const a4 = false;
 console.log(comp(a3, a4))
+
+
+
+
+//Parameters- mone array of strings containing words (colors)
+//Return- return the number of matching pairs of strings in the argument
+//E
+//p
+
+// Pair of gloves
+// Winter is coming, you must prepare your ski holidays. The objective of this kata is to determine the number of pair of gloves you can constitute from the gloves you have in your drawer.
+
+// Given an array describing the color of each glove, return the number of pairs you can constitute, assuming that only gloves of the same color can form pairs.
+
+function numberOfPairs(gloves) {
+    //instantiate a counter
+    let counter = 0;
+    //copy gloves to a local variable to not change the original and sort it
+    let copyGloves = [...gloves].sort();
+    //initiate loop
+    for (let i = 0; i < copyGloves.length; i++) {
+        //check current index against next index to see if they are the same
+        if (copyGloves[i] === copyGloves[i+1]) {
+            //if match found, increase counter for pairs
+            counter++;
+            //remove the current index and the one next to it
+            copyGloves.splice(i, 2)
+            //reduce incrementer by 1 due to removing two items from array
+            i--;
+        }
+    }
+    //return counter
+    return counter;
+}
+
+
+numberOfPairs(['red','red']) //should return ===> 1 because there is one pair (red) found in the array
+numberOfPairs(['red','green','blue']) //should return ===> 0 because there are no pairs found in the array
+numberOfPairs(['gray','black','purple','purple','gray','black']) //should return ===> 3 because there are three pairs (gray, purple and black) found in the array
