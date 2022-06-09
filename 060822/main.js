@@ -15,7 +15,7 @@ function numberOfPairs(gloves){
     let gloves2 = gloves.slice(0).sort()
     //set acc to 0 for later return 
     let acc = 0
-    //initiate loop through sorted array/
+    //initiate loop through sorted array
     for (let i = 0; i < gloves2.length - 1; i++){
         //check current element against the next element for a match
       if (gloves2[i] === gloves2[i + 1]){
@@ -34,6 +34,6 @@ function numberOfPairs(gloves){
 
   numberOfPairs(['red','red'])  //should return 1 because there is only one pair (red,red)
   numberOfPairs(['red','green','blue']) //should return 0 because there are no pairs in the array
-  numberOfPairs(['gray','black','purple','purple','gray','black']) //should return 3 because there are three pairs (gray,grey/purple,purpler/black,black) test
+  numberOfPairs(['gray','black','purple','purple','gray','black']) //should return 3 because there are three pairs (gray,grey/purple,purpler/black,black)
 
 
