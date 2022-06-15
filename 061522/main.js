@@ -12,7 +12,7 @@ function spongeMeme(sentence) {
     return sentence
     //split into array. 
                 .split('')
-    //loop through array. //alternate capital and lowercase. 
+    //loop through array. //alternate capital and lowercase. should return an array of (`SeNtEnCe`) when 'sentence' is passed in 
                 .map((e,i) => i % 2 === 0 ? e.toUpperCase() : e.toLowerCase())
     //join. 
                 .join('')
