@@ -85,4 +85,53 @@ evensAndOdds(13) // Should return => 'd'
 evensAndOdds(47) // Should return => '2f'
 evensAndOdds(0) // Should return => '0'
 evensAndOdds(12800) // Should return => '11001000000000'
-evensAndOdds(8172381723) // Should return => '1e71ca61b'
+evensAndOdds(8172381723) // Should return => '1e71ca61b' 
+
+
+
+
+// Find the missing term in an Arithmetic Progression
+// An Arithmetic Progression is defined as one in which there is a constant difference between the consecutive terms of a given series of numbers. You are provided with consecutive elements of an Arithmetic Progression. There is however one hitch: exactly one term from the original series is missing from the set of numbers which have been given to you. The rest of the given series is the same as the original AP. Find the missing term.
+
+// You have to write a function that receives a list, list size will always be at least 3 numbers. The missing term will never be the first or last one.
+
+
+//p- one list of incrementing or decrementing numbers with one missing form the pattern
+//r- the missing number form the pattern
+
+var findMissing = function (list) {  
+    //check if list if increasing or decreasing. Reverse list if decreasing
+    list = list[0] > list[1] ? list.reverse() : list
+    //find diff in index 1 and 0
+    const diff = list[1] - list[0],
+    //find difference from index 2 and 1
+          diff1 = list[2] - list[1],
+          //assign lower of differences
+          diff2 = diff > diff1 ? diff1 : diff
+          //loop through array
+    for (let i = 0; i<list.length - 1; i++){
+        //test if next index is (lower) difference + current index
+      if (list[i] + diff2 !== list[i+1]) {
+        //if not return current index + difference
+        return list[i] + diff2
+      }
+    }
+  }
+
+
+var findMissing2 = function (list) { 
+    //reverse list when list is descending numbers
+    list = list[0] > list[1] ? list.reverse() : list
+    //determine min of index 1 - index 0 vs index 2 - 1
+    const diff = Math.min(list[1] - list[0],list[2] - list[1])
+    //loop array
+    for (let i = 0; i<list.length-1; i++){
+        //check for diff + crrent ind === next number. If it does not equal, return current index + diff
+      if (list[i] + diff !== list[i+1]) {return list[i] + diff}
+    }
+  }
+
+
+  findMissing([1, 3, 5, 9, 11])//should return => 7
+  findMissing([1, 2, 3, 5, 6, 7, 8, 9, 10, 11]) //should return => 4
+
