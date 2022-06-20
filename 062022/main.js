@@ -54,3 +54,35 @@ function anagrams(word, words) {
 anagrams('abba', ['aabb', 'abcd', 'bbaa', 'dada']) // should return => ['aabb', 'bbaa'] as these are the anagrams contained inside the words array
 anagrams('racer', ['crazer', 'carer', 'racar', 'caers', 'racer']) // should return => ['carer', 'racer'] as these are the anagrams contained inside the words array
 anagrams('laser', ['lazing', 'lazy',  'lacer']) // should return => [] as there are no anagrams of word inside the words array
+
+
+
+
+
+//p - single number
+//r - if even return num in binary. if odd return number in hex
+//e
+//p
+
+// Evens and Odds
+// This kata is about converting numbers to their binary or hexadecimal representation:
+
+//     If a number is even, convert it to binary.
+//     If a number is odd, convert it to hex.
+
+// Numbers will be positive. The hexadecimal string should be lowercased.
+
+
+
+
+function evensAndOdds(num){
+	return num % 2 === 0 ? num.toString(2) : num.toString(16)
+}
+
+
+evensAndOdds(2) // Should return => '10'
+evensAndOdds(13) // Should return => 'd'
+evensAndOdds(47) // Should return => '2f'
+evensAndOdds(0) // Should return => '0'
+evensAndOdds(12800) // Should return => '11001000000000'
+evensAndOdds(8172381723) // Should return => '1e71ca61b'
