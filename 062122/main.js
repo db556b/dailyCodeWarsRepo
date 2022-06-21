@@ -21,6 +21,7 @@ function solution(number){
         acc += i
       }
     }
+    
     //return acc
     return acc
   }
