@@ -82,3 +82,20 @@ function fizzbuzzPlusPlus(numbers, words) {
 
 
   fizzbuzzPlusPlus([2,3,5],["fizz", "buzz", "bazz"]) // should return [ 1, 'fizz', 'buzz', 'fizz', 'bazz', 'fizzbuzz', 7, 'fizz', 'buzz', 'fizzbazz', 11, 'fizzbuzz',  13, 'fizz', 'buzzbazz', 'fizz', 17, 'fizzbuzz',  19, 'fizzbazz', 'buzz', 'fizz', 23, 'fizzbuzz',  'bazz', 'fizz', 'buzz', 'fizz', 29 , 'fizzbuzzbazz'])
+
+
+
+
+
+  function longestConsec(strarr, k) {  
+  
+    let long = strarr.slice(0,k).join('')
+      if(k > strarr.length || k < 1) {
+        return ''
+      }  
+       for(let i = 0; i <= strarr.length - k; i++){
+         let temp = strarr.slice(i, i + k).join('')       
+          long = temp.length > long.length ? temp : long
+       }
+      return long
+    }
