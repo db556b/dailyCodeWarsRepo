@@ -57,3 +57,26 @@ function highAndLow(numbers){
 
   highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4") // should return => "42 -9" because 42 is the highest number in the argument and -9 is the lowest number
   highAndLow("1 2 3") // should return => "3 1" because 3 is the highest number in the argumnet and 1 is the lowest
+
+
+
+//   Sorted? yes? no? how?
+//   Complete the method which accepts an array of integers, and returns one of the following:
+
+//   "yes, ascending" - if the numbers in the array are sorted in an ascending order
+//   "yes, descending" - if the numbers in the array are sorted in a descending order
+//   "no" - otherwise
+
+// You can assume the array will always be valid, and there will always be one correct answer.
+
+
+  function isSortedAndHow(array) {
+    let asc = false,
+        des = false
+    console.log(array)
+    for (let i = 0; i < array.length - 1; i++){
+      if (array[i] === array[i +1]){continue}
+      array[i] > array[i + 1] ? des = true :  asc = true 
+    }
+      return asc === true && des === true ? 'no' : asc === true ? 'yes, ascending' : 'yes, descending'
+    }
