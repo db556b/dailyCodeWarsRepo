@@ -25,3 +25,35 @@ function disemvowel(str) {
 disemvowel("This website is for losers LOL!") // should return =>  "Ths wbst s fr lsrs LL!"
 disemvowel("No offense but,\nYour writing is among the worst I've ever read") // should return =>  "N ffns bt,\nYr wrtng s mng th wrst 'v vr rd"
 disemvowel("What are you, a communist?") // should return =>  "Wht r y,  cmmnst?"
+
+
+
+//p- a string containing space-separated numbers
+//r- a string containing the highest number followed by the lowest number in the argument
+
+// Highest and Lowest
+// In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
+// Examples
+
+// highAndLow("1 2 3 4 5");  // return "5 1"
+// highAndLow("1 2 -3 4 5"); // return "5 -3"
+// highAndLow("1 9 3 4 -5"); // return "9 -5"
+
+// Notes
+
+//     All numbers are valid Int32, no need to validate them.
+//     There will always be at least one number in the input string.
+//     Output string must be two numbers separated by a single space, and highest number is first.
+
+
+
+function highAndLow(numbers){
+    //save new var with argumnet split on the spaces
+    const num = numbers.split(' ')
+    //return joined array containing the highest and lowest numbers
+    return [Math.max(...num),Math.min(...num)].join(' ')
+  }
+
+
+  highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4") // should return => "42 -9" because 42 is the highest number in the argument and -9 is the lowest number
+  highAndLow("1 2 3") // should return => "3 1" because 3 is the highest number in the argumnet and 1 is the lowest
