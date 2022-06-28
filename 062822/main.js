@@ -101,5 +101,4 @@ function highAndLow(numbers){
         let first = f.toUpperCase()[0],
             last = l.toUpperCase()[0]
         return !firstName[first] || !surname[last]  ? "Your name must start with a letter from A - Z." : `${firstName[first]} ${surname[last]}` 
-    
     }
