@@ -21,6 +21,11 @@ function longest(s1, s2) {
   return uS1.sort().join('')
 }
 
+
+
+
+
+
 function findNextSquare(sq) {
   let square = Math.sqrt(sq)
   return square === Math.ceil(square) ? (square + 1) ** 2  : -1
