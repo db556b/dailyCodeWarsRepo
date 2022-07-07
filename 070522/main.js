@@ -42,3 +42,55 @@ function narcissisticRefactor(value) {
 
 narcissistic( 7 )// should return =>  true
 narcissistic( 371 )// should return =>  true
+
+//p- a string containing a sentence or random letter including punctuation
+//r- true or false. True if the argument contains all the letters of the alphabet regardless of case. False if not. 
+
+
+// Detect Pangram
+// A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence "The quick brown fox jumps over the lazy dog" is a pangram, because it uses the letters A-Z at least once (case is irrelevant).
+
+// Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.
+
+
+function isPangram(string){
+    //split the string on the spaces and then join it
+    string = string.split(' ').join('')
+    //init alpha bet to which to compare
+    const alpha = 'abcdefghijklmnopqrstuvwxyz'
+    //return false if length is less than 26 as then it cannot contain all letters else return string
+    return string.length < 26 ? false : string
+    //converted to lower case
+      .toLowerCase()
+      //split again to form array
+      .split('')
+      //sorted
+      .sort()
+      //mapped to ensure only unique letters
+      .map((e,i,a) => a[i + 1] !== e ? e : '')
+      //joined again to compare
+      .join('')
+      //then check if alpha string is contained within the string
+      .includes(alpha)
+  }
+
+  function isPangram2(string){
+    //init alphabet
+    return 'abcdefghijklmnopqrstuvwxyz'
+    //split alphabet
+      .split('')
+      //check if every element of the alphabet 
+      .every((x) => {
+        //is in the string
+        string
+        //lowercased (case does not matter for this excercise)
+        .toLowerCase()
+        //is included
+        .includes(x)
+    })
+  }
+
+
+
+  isPangram("The quick brown fox jumps over the lazy dog.")// should return true as all letter of the alphabet are in the argument
+  isPangram("This is not a pangram.")// should return false as all letters of the alphabet are not in the argument
