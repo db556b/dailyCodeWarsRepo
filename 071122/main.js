@@ -55,3 +55,5 @@ var longestCommonPrefix = function(strs) {
     //check if common is empty quotes, if so return those quotes; otherwise return common joined. 
     return common === '' ? common : common.join('')
 };
+
+//this can be optimized further- likely shoudl use a divide and conquer by initing two separate loops to do comparison and then compare the final responses of the two separate end common prefixes
