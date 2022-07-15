@@ -62,3 +62,28 @@ function createPhoneNumber(n){
   function accum2(s) {
     return s.split('').map((c, i) => (c.toUpperCase() + c.toLowerCase().repeat(i))).join('-');
   }
+
+
+
+
+//   Exes and Ohs
+//   Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
+
+// Examples input/output:
+
+
+  function XO(str) {
+    function test(par){
+      return str.toLowerCase().split('').filter(e => e === par).length
+    }
+   return test('x') === test('o')
+  }
+
+
+
+XO("ooxx")// should return  => true
+XO("xooxx")// should return  => false
+XO("ooxXm")// should return  => true
+XO("zpzpzpp")// should return  => true // when no 'x' and 'o' is present should return true
+XO("zzoo")// should return  => false
+
