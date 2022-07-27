@@ -47,3 +47,21 @@ makeString("sees eyes xray yoat") //should return => "sexy" as these are the fir
 makeString("brown eyes are nice") //should return => "bean" as these are the first letter of the argument's words
 makeString("cars are very nice") //should return => "cavn" as these are the first letter of the argument's words
 makeString("kaks de gan has a big head") //should return => "kdghabh" as these are the first letter of the argument's words
+
+// Anagram Detection
+// An anagram is the result of rearranging the letters of a word to produce a new word (see wikipedia).
+
+// Note: anagrams are case insensitive
+
+// Complete the function to return true if the two arguments given are anagrams of each other; return false otherwise.
+
+var isAnagram = function(test, original) {
+    if (test.length != original.length){return false}
+    test = test.toLowerCase().split('').sort()
+    original = original.toLowerCase().split('').sort()
+  for (let i = 0; i < test.length; i++){
+    if (test[i] !== original[i]){return false}
+  }
+  console.log(original, test)
+  return true
+  };
