@@ -32,3 +32,9 @@ function halvingSum(n) {
 
 halvingSum(25) // should return => 47  as 25  =>  25 + 12 + 6 + 3 + 1 = 47
 halvingSum(127) // should return => 247 
+
+
+//function halvingSum(n) {
+//     if(n === 1) return n;
+//     return n + halvingSum(Math.floor(n/2));
+// }
