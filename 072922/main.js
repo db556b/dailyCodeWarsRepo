@@ -110,3 +110,29 @@ largestPairSum(10,14,2,23,19) // should return =>  42
 largestPairSum(-100,-29,-24,-19,19) // should return =>  0
 largestPairSum(1,2,3,4,6,-1,2) // should return =>  10
 largestPairSum(-10, -8, -16, -18, -19) // should return =>  -18
+
+
+//P- an object with key and values
+//R- an array of arrays with the key values pairs in their own arrays. These need to be sorted alphabetically based on the key.
+
+// Convert Hash To An Array
+// Convert a hash into an array. Nothing more, Nothing less.
+// {name: 'Jeremy', age: 24, role: 'Software Engineer'}
+// should be converted into
+// [["name", "Jeremy"], ["age", 24], ["role", "Software Engineer"]]
+// Note: The output array should be sorted alphabetically.
+// Good Luck!
+
+
+function convertHashToArray(hash){
+    //take the object entries of hash and insert them into an array. sort them. return them 
+    return Object.entries(hash).sort()
+    }
+
+
+
+    convertHashToArray({name: "Jeremy"})    //should return => [["name", "Jeremy"]]);
+    convertHashToArray({name: "Jeremy", age: 24})    //should return => [["age", 24], ["name", "Jeremy"]]);
+    convertHashToArray({name: "Jeremy", age: 24, role: "Software Engineer"})    //should return => [["age", 24], ["name", "Jeremy"], ["role", "Software Engineer"]]);
+    convertHashToArray({product: "CodeWars", powerLevelOver: 9000})    //should return => [["powerLevelOver", 9000], ["product", "CodeWars"]]);
+    convertHashToArray({})    //should return => []);
