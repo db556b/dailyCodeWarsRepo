@@ -87,3 +87,11 @@ firstNonRepeated("ttrree") // should return => null because all letters in the a
 var getConcatenation = function(nums) {
     return [...nums,...nums]
 };
+
+
+// Number of 1 Bits
+// Write a function that takes an unsigned integer and returns the number of '1' bits it has (also known as the Hamming weight).
+
+var hammingWeight = function(n) {
+    return n.toString(2).split('').reduce((a,b) => +a + +b, 0)
+};
